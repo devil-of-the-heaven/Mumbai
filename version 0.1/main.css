@@ -1,5 +1,5 @@
 @font-face{
-	src: 'E:/Fox/SOMETHING/Mumbai/fonts/Comfortaa-Regular.ttf';
+	src: 'fonts/Comfortaa-Regular.ttf';
 	font-family: comfortaa;
 }    
 html{
@@ -25,11 +25,11 @@ body{
 	background-attachment: fixed;
 	background-position: center;
 }
-#one{background-image: url('E:/Fox/SOMETHING/Mumbai/images/joshua.jpg'); height: 150vh;   }
+#one{background-image: url('images/joshua.jpg'); height: 150vh;   }
 #two{background-color: #101010;}
-#three{background-image: url('E:/Fox/SOMETHING/Mumbai/images/bandra.jpg'); }
+#three{background-image: url('images/bandra.jpg'); }
 #four{}
-#five{background-image: url('E:/Fox/SOMETHING/Mumbai/images/posters.jpg');}
+#five{background-image: url('images/posters.jpg');}
 .gradient{
 	height: inherit;
 	width: auto;
