@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery3.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css"><link>
+    <title>Mumbai</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="menu-closer-body"></div>
+    <img class="men" src="menu.png">
+    <div id="menu">
+        <a class="menu-a" id="menu-closer">X</a><br>
+        <a class="menu-a">Home</a><br>
+        <a class="menu-a">Bombay</a><br>
+        <a class="menu-a">Bollywood</a><br>
+        <a class="menu-a">Dreams</a><br>
+    </div>
+    <div class="on" id="one">
+        <div class="gradient">
+            <a id="logo">root a </a>
+            <h1>Mumbai </h1><p>City of Dreams</p>
+            <a id="hash-links" href="https://www.instagram.com/explore/tags/mumbai/?hl=en" target="newtab">#mumbai</a>
+            <div class="rating-box">
+                Quality of life<div class="ratings" id="ratings-1"></div><br>
+                Safety Index <div class="ratings" id="ratings-2"></div><br>
+                Health Index <div class="ratings" id="ratings-3"></div>
+            </div>    
+        </div>
+    </div>
+    <div class="on" id="two"></div>
+    <div class="on" id="three">
+        <div class="gradient2">
+        </div>
+    </div>
+    <div class="on" id="four">  
+    </div>
+    <div class="on" id="five">
+        <div class="gradient2">
+        </div>      
+    </div>
+</body>
+<script>
+    
+    $(window).scroll(function(){
+        var i = $(window).scrollTop();
+        console.log(i);
+        if( i > 100){
+            $('#one').css({
+                'background-size':''+ i +'%',
+            })
+            $('.gradient').css({
+                'background-color':'rgba(10, 10, 10, '+i/700+')',
+            })       
+        }
+        if( i < 50){
+            $('#one').css({'background-size':'cover',});
+        }        
+    })
+    $('#menu-closer').hide();
+    $('.men').click(function(){
+        $('body').css({'margin-right':'400px',})
+        $(this).hide();
+        $('#menu-closer').show(100);
+        $('#menu').css({'width':'400px',})
+        $('#menu-closer-body').css({'display':'block',})
+    })
+    $('#menu-closer').click(function(){
+        $('body').css({'margin-right':'0',})
+        $('.men').show(1000);
+        $('#menu-closer').hide(1000);
+        $('#menu').css({'width':'0',})
+        $('#menu-closer-body').css({'display':'none',})
+    })
+    $('#menu-closer-body').click(function(){
+        $('body').css({'margin-right':'0',})
+        $('.men').show(1000);
+        $('#menu-closer').hide(1000);
+        $('#menu').css({'width':'0',})
+        $('#menu-closer-body').css({'display':'none',})
+    })
+
+</script>
+</html>
