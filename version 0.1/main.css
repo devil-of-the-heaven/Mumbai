@@ -1,0 +1,199 @@
+@font-face{
+	src: 'E:/Fox/SOMETHING/Mumbai/fonts/Comfortaa-Regular.ttf';
+	font-family: comfortaa;
+}    
+html{
+	scrollbar-face-color: #006060;
+	scroll-behavior: smooth;
+}
+body{
+	background-color: #101010;
+	margin: 0;
+	color: #eeeeee;
+	font-family: 'comfortaa',sans-serif;
+	transition: 2s;
+	scroll-behavior: smooth;
+	scrollbar-face-color: #006060;
+	letter-spacing: 5px;
+}
+.on{
+	height: 150vh;
+	width: auto;
+	font-size: 26px;
+	margin: 0;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+#one{background-image: url('E:/Fox/SOMETHING/Mumbai/images/joshua.jpg'); height: 150vh;   }
+#two{background-color: #101010;}
+#three{background-image: url('E:/Fox/SOMETHING/Mumbai/images/bandra.jpg'); }
+#four{}
+#five{background-image: url('E:/Fox/SOMETHING/Mumbai/images/posters.jpg');}
+.gradient{
+	height: inherit;
+	width: auto;
+	background: radial-gradient(circle, transparent 20%, #101010 90%); 
+	background-color : rgba(10, 10, 10, 0);
+}
+.gradient2{
+	height: inherit;
+	width: auto;
+	background: radial-gradient(circle, transparent 20%, #101010 90%);
+	background-color : rgba(10, 10, 10, 0.2); 
+}
+#one h1{
+	margin:0;
+	text-align: center;
+	padding-top: 140px;
+	font-size: 130px;
+	letter-spacing: 10px;
+	font-weight: 900;
+	text-shadow: 4px 8px 5px #101010;
+}
+#one p{
+	text-align: center;
+	font-weight: 100;
+	text-align: center;
+	font-size: 40px;
+	letter-spacing: 10px;
+	text-shadow: 4px 8px 5px #101010;
+	white-space: nowrap;
+}
+#logo{
+	font-family: monospace;
+	display: block;
+	position: sticky;
+	top: 0;
+	left: 0;
+	font-weight: 600;
+	letter-spacing: 5px;
+	padding: 10px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+.men{
+	margin: 30px;
+	right: 0;
+	display: block;
+	position: fixed;
+	cursor: pointer;
+	padding: 20px;
+	transition: 2s;
+	z-index: 2;
+}
+#menu{
+	z-index: 3;
+	display: block;
+	position: fixed;
+	width: 0px;
+	height: 100vh;
+	background-color: #101010;
+	top: 0;
+	right: 0;
+	transition: 2s;
+}
+.menu-a{
+	font-size: 50px;
+	margin: 30px;
+	padding: 50px;
+	line-height: 100px;
+	transition: 100ms;
+	cursor: pointer;
+}
+#menu-closer{
+	cursor: pointer;
+	float: right;
+	padding: 30px;
+	margin: 20px;
+	line-height: 30px;
+	transition: 2s;
+}
+.menu-a:hover{
+	font-size: 60px;
+	font-weight: 600;
+}
+#hash-links{
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 5px;
+	font-size: 35px;
+	color: #eeeeee;
+	text-decoration: none;
+}
+.rating-box{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 20px;
+}
+.ratings{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	border: 2px solid #eee;
+	border-radius: 5px;
+}
+.ratings::after{
+	position: absolute;
+	font-size: 25px;
+	content: '';
+	height: inherit;
+	width: 0;
+	background-color: rgb(238, 238, 238);
+	border-radius: 5px;
+}
+#ratings-1::after{width: 149.4px;}
+#ratings-2::after{width: 114.48px;}
+#ratings-3::after{width: 135.7px;}
+#menu-closer-body{
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+}
+@media only screen and (max-width : 700px){
+	#one h1{
+		font-size: 60px;
+		letter-spacing: 3px;
+	}
+	#one p{
+		font-size: 20px;
+	}
+	#logo{
+		padding: 5px;
+	} 
+	.men{
+		margin: 10px;
+		padding: 5px;
+	}
+	.menu-a{
+		margin: 10px;
+		padding: 25px;
+		font-size: 30px; 
+	}   
+	#hash-links{
+		font-size: 20px;
+	}        
+	.rating-box{
+		font-size: 20px;
+	}
+	.ratings{
+		width: 100px;
+		height: 20px;
+	}
+	#ratings-1::after{
+		width: 74.7px;
+	}
+	#ratings-2::after{
+		width: 57.24px;
+	}
+	#ratings-3::after{
+		width: 67.85px;
+	}
+
+}
