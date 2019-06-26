@@ -95,23 +95,21 @@ body{
 }
 .menu-a{
 	font-size: 50px;
-	margin: 30px;
-	padding: 50px;
-	line-height: 100px;
+	padding: 20px;
 	transition: 100ms;
-	cursor: pointer;
+    cursor: pointer;
+    display: block;
 }
 #menu-closer{
-	cursor: pointer;
-	float: right;
+    cursor: pointer;
+    text-align: right;
 	padding: 30px;
-	margin: 20px;
-	line-height: 30px;
-	transition: 2s;
 }
 .menu-a:hover{
 	font-size: 60px;
-	font-weight: 600;
+    font-weight: 600;
+    background-color: #dddd10;
+    color: #101010;
 }
 #hash-links{
 	display: inline-block;
