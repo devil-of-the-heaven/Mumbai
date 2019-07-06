@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery3.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            color: #eee;
+            background-color: #a21010;
+            font-family: monospace;
+            height: 600vh;
+        }
+        .men{
+            margin: 30px;
+            right: 0;
+            display: block;
+            position: fixed;
+            cursor: pointer;
+            padding: 20px;
+            transition: 2s;
+            z-index: 5;
+        }
+        #menu{
+            z-index: 3;
+            display: block;
+            position: fixed;
+            width: 0px;
+            height: 100vh;
+            background-color: #101010;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transition: 2s;
+        }
+        #menu::before{
+            content: '';
+            z-index: -1;
+            display: block; 
+            height: 100vh;  
+            width: 700vh; background-color: #101010;
+            margin-right: 200px;
+            transform-origin: 100px 100px;
+            transform: translate(-200px, -100px) rotate(40deg);
+        }
+        .menu-a{
+            font-size: 50px;
+            padding: 20px;
+            transition: 100ms;
+            cursor: pointer;
+            display: block;
+        }
+        #menu-closer{
+            cursor: pointer;
+            text-align: right;
+            padding: 30px;
+        }
+        .menu-a:hover{
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="menu-closer-body"></div>
+    <img class="men" src="images/menu.png">
+    <div id="menu">
+        <a class="menu-a" id="menu-closer">X</a><br>
+        <a class="menu-a">Home</a><br>
+        <a class="menu-a">Bombay</a><br>
+        <a class="menu-a">Bollywood</a><br>
+        <a class="menu-a">Dreams</a><br>
+    </div>
+</body>
+<script>
+    $('#menu-closer').hide();
+    $('.men').click(function(){
+        $('body').css({'margin-right':'400px',})
+        $(this).hide();
+        $('#menu-closer').show(100);
+        $('#menu').css({'width':'600px',})
+        $('#menu::before').css({'display':'block',})
+        $('#menu-closer-body').css({'display':'block',})
+    })
+    $('#menu-closer').click(function(){
+        $('body').css({'margin-right':'0',})
+        $('.men').show(1000);
+        $('#menu-closer').hide(1000);
+        $('#menu').css({'width':'0',})
+        $('#menu-closer-body').css({'display':'none',})
+    })
+    $('#menu-closer-body').click(function(){
+        $('body').css({'margin-right':'0',})
+        $('.men').show(1000);
+        $('#menu-closer').hide(1000);
+        $('#menu').css({'width':'0',})
+        $('#menu-closer-body').css({'display':'none',})
+    })
+
+</script>
+</html>
